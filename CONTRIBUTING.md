@@ -1,7 +1,7 @@
-# Contributing to my boilerplate
+# Contributing to my Portfolio
 Thanks for taking a look! It means a lot! :D
 
-As this is my own boilerplate, I'm looking to do the heavy lifting by myself. However, I'm open to small contributions. These are:
+As this is my own site, I'm looking to do the heavy lifting by myself. However, I'm open to small contributions. These are:
 - Issue submissions (Bug reports, feature requests, etc...)
 - Hotfixes
 
