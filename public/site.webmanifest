@@ -1,13 +1,17 @@
 {
-	"name": "",
-	"short_name": "",
-	"description": "",
+	"name": "SweetBoy | Official site",
+	"short_name": "SweetBoy",
+	"description": "Technomancer. NGHT-RDR. Gamer. This is the official site of SweetBoy.",
 	"start_url": "./",
-	"theme_color": "#fafafa",
-	"background_color": "#fafafa",
+	"theme_color": "#990000",
+	"background_color": "#191919",
 	"icons": [{
-		"src": "./res/assets/img/icon.png",
-		"type": "image/png",
-		"sizes": "192x192"
+			"src": "./res/assets/img/Branding/Logos/Avatar.svg",
+			"type": "image/svg+xml",
+			"sizes": "500x500"
+		}, {
+			"src": "./res/assets/img/Branding/Logos/Avatar.png",
+			"type": "image/png",
+			"sizes": "500x500"
 	}]
 }
