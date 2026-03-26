@@ -5,7 +5,8 @@
 
 /* #region Base styles: opinionated defaults */
 html {
-	color: #222;
+	background: var(--NGHT-BLCK);
+	color: whitesmoke;
 	font: normal 20px / 1.25 sans-serif;
 	scroll-behavior: smooth;
 }
@@ -13,12 +14,12 @@ html {
 /* Remove text-shadow in selection highlight: https://twitter.com/miketaylr/status/12228805301
  * Customize the background color to match your design. */
 ::-moz-selection {
-	background: #b3d4fc;
+	background: var(--NGHT-RD);
 	text-shadow: none;
 }
 
 ::selection {
-	background: #b3d4fc;
+	background: var(--NGHT-RD);
 	text-shadow: none;
 }
 
@@ -27,7 +28,7 @@ hr {
 	display: block;
 	height: 1px;
 	border: 0;
-	border-top: 1px solid #ccc;
+	border-top: 1px solid currentColor;
 	margin: 1em 0;
 	padding: 0;
 }
@@ -61,6 +62,8 @@ textarea {
 
 :root {
 	/* Colour palette */
+	--NGHT-RD: #900;
+	--NGHT-BLCK: #191919;
 }
 
 h1 {
@@ -96,7 +99,16 @@ p {
 }
 
 a, button {
+	color: var(--NGHT-RD);
 	transition-property: all;
+}
+
+a:hover {
+	filter: brightness(1.5);
+}
+
+a:active {
+	color: whitesmoke;
 }
 /* #endregion */
 
