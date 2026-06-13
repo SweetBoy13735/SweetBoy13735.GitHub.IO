@@ -14,7 +14,19 @@ const devConfig = {
 		static: "./public",
 		hot: true,
 		liveReload: true
-	}, devtool: "inline-source-map"
+	}, devtool: "inline-source-map",
+	module: {
+		rules: [{
+				test: /\.css$/i,
+				use: ["style-loader", {
+						loader: "css-loader",
+						options: {
+							modules: { localIdentName: "[path][name]_[local]" },
+							esModule: false
+						}
+				}]
+		}]
+	}
 };
 //#endregion
 
