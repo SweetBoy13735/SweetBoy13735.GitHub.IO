@@ -1,11 +1,9 @@
 {
-	"name": "",
+	"name": "sweetboy13735-site",
 	"version": "0.0.1",
-	"description": "",
 	"private": true,
-	"keywords": [""],
-	"license": "",
-	"author": "",
+	"license": "MIT",
+	"author": "Ramone R. A. Graham",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"start": "webpack serve --config webpack.dev.js",
