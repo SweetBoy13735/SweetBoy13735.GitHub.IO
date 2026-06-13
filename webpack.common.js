@@ -11,7 +11,13 @@ const commonConfig = {
 		filename: "[name].bundle.js",
 		path: Path.resolve(__dirname, "dist"),
 		clean: true
-	}, plugins: [new HTMLWebpackPlugin({ template: "./public/index.html" })]
+	}, plugins: [new HTMLWebpackPlugin({ template: "./public/index.html" })],
+	module: {
+		rules: [{
+				test: /\.(svg|png|gif|jpg|jpeg)$/i,
+				type: "asset/resource"
+		}]
+	}
 };
 //#endregion
 
