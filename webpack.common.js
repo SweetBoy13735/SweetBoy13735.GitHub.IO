@@ -16,8 +16,15 @@ const commonConfig = {
 		rules: [{
 				test: /\.(svg|png|gif|jpg|jpeg)$/i,
 				type: "asset/resource"
+			}, {
+				test: /\.(m?js|jsx)$/,
+				exclude: /node_modules/,
+				use: {
+					loader: "babel-loader",
+					options: { presets: ["@babel/preset-env", "@babel/preset-react"] }
+				}
 		}]
-	}
+	}, resolve: { extensions: [".jsx", "..."] }
 };
 //#endregion
 
