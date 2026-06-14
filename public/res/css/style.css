@@ -4,13 +4,84 @@
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal, Kroc Camen, and the H5BP dev community and team. */
 
 /* #region At-rules */
+@font-face {
+	font-family: "Until 25";
+	src: url(../assets/fonts/Until25-Italic.otf) format(opentype);
+}
+
+@font-face {
+	font-family: "FixedSys Excelsior";
+	src: url(../assets/fonts/FSEX302.ttf) format(truetype);
+}
+
+@font-face {
+	font-family: Tomorrow;
+	font-weight: bold;
+	src: url(../assets/fonts/Tomorrow-Bold.ttf) format(truetype);
+}
+
+@font-face {
+	font-family: Tomorrow;
+	font-style: italic;
+	font-weight: bold;
+	src: url(../assets/fonts/Tomorrow-BoldItalic.ttf) format(truetype);
+}
+
+@font-face {
+	font-family: "IBM Plex Sans";
+	src: url(../assets/fonts/IBMPlexSans-Regular.ttf) format(truetype);
+}
+
+@font-face {
+	font-family: "IBM Plex Sans";
+	font-weight: 300;
+	src: url(../assets/fonts/IBMPlexSans-Light.ttf) format(truetype);
+}
+
+@font-face {
+	font-family: "IBM Plex Sans";
+	font-weight: 500;
+	src: url(../assets/fonts/IBMPlexSans-Medium.ttf) format(truetype);
+}
+
+@font-face {
+	font-family: "IBM Plex Sans";
+	font-weight: bold;
+	src: url(../assets/fonts/IBMPlexSans-Bold.ttf) format(truetype);
+}
+
+@font-face {
+	font-family: "IBM Plex Sans";
+	font-weight: bold;
+	font-style: italic;
+	src: url(../assets/fonts/IBMPlexSans-BoldItalic.ttf) format(truetype);
+}
+
+@font-face {
+	font-family: "IBM Plex Sans";
+	font-stretch: condensed;
+	src: url(../assets/fonts/IBMPlexSansCondensed-Regular.ttf) format(truetype);
+}
+
+@font-face {
+	font-family: "IBM Plex Sans";
+	font-stretch: condensed;
+	font-style: italic;
+	src: url(../assets/fonts/IBMPlexSansCondensed-Italic.ttf) format(truetype);
+}
+
+@font-face {
+	font-family: "IBM Plex Serif";
+	font-style: italic;
+	src: url(../assets/fonts/IBMPlexSerif-Italic.ttf) format(truetype);
+}
 /* #endregion */
 
 /* #region Base styles: opinionated defaults */
 html {
 	background: fixed center / cover no-repeat url(../assets/img/Branding/Elements/NGHT-VSN/2025/The\ Icarus\ Journey.png), var(--NGHT-BLCK);
 	color: whitesmoke;
-	font: normal 20px / 1.25 sans-serif;
+	font: 300 20px / 1.25 "IBM Plex Sans", sans-serif;
 	scroll-behavior: smooth;
 }
 
@@ -73,11 +144,15 @@ textarea {
 }
 
 h1 {
-	font-size: 2.5em;
+	font: italic normal 5em / 1 "Until 25", monospace;
 }
 
 h2, h3, h4, h5, h6 {
 	margin-bottom: .5em;
+}
+
+h2, h3, h4, h5 {
+	font-family: Tomorrow, sans-serif;
 }
 
 h2 {
@@ -86,6 +161,10 @@ h2 {
 
 h3 {
 	font-size: 2em;
+}
+
+h4, h5, h6 {
+	font-style: italic;
 }
 
 h4 {
@@ -104,6 +183,10 @@ p {
 	margin: .5em 0;
 }
 
+a, button, figcaption, caption {
+	font-weight: normal !important;
+}
+
 a, button {
 	color: var(--NGHT-RD);
 	cursor: pointer;
@@ -114,6 +197,7 @@ button {
 	background-color: transparent;
 	border: .125rem solid currentColor;
 	border-radius: .25rem;
+	font: inherit;
 	padding: .25rem .5rem;
 }
 
@@ -129,13 +213,27 @@ a:active, button:active {
 	color: whitesmoke;
 }
 
-figure>:not(figcaption) {
-	margin-left: .5rem;
+q {
+	font-family: "IBM Plex Serif", serif;
+	font-style: italic;
 }
 
 blockquote>q::before, blockquote>q::after {
 	color: var(--NGHT-RD);
 	display: block;
+	font-family: "FixedSys Excelsior", monospace;
+	font-size: 1.5em;
+	left: -.25em;
+	position: relative;
+	top: .25rem;
+}
+
+figure>:not(figcaption) {
+	margin-left: .5rem;
+}
+
+figcaption, caption {
+	font-stretch: condensed;
 }
 
 table {
@@ -144,21 +242,28 @@ table {
 	margin: .25rem;
 }
 
-table caption {
+caption {
 	caption-side: bottom;
 	margin-top: .25rem;
 }
 
-table th, table td {
+th, td {
 	padding: .125rem .25rem;
 }
 
-table th {
+th {
 	background-color: var(--NGHT-RD);
+	font-weight: 500;
 }
 
-table td {
+td {
 	background-color: var(--NGHT-BLCK);
+}
+
+span.subtitle {
+	display: block;
+	font: normal 2.5em "FixedSys Excelsior", monospace;
+	text-align: right;
 }
 /* #endregion */
 
