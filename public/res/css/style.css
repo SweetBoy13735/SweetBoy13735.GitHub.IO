@@ -296,6 +296,13 @@ span.subtitle {
 /* #endregion */
 
 /* #region Footer */
+footer {
+	background-color: var(--NGHT-BLCKGRND);
+	bottom: 0;
+	box-shadow: 0 0 .25rem .25rem var(--NGHT-RD);
+	position: fixed;
+	width: 100%;
+}
 /* #endregion */
 /* #endregion */
 
