@@ -8,7 +8,8 @@
 
 /* #region Base styles: opinionated defaults */
 html {
-	color: #222;
+	background: fixed center / cover no-repeat url(../assets/img/Branding/Elements/NGHT-VSN/2025/The\ Icarus\ Journey.png), var(--NGHT-BLCK);
+	color: whitesmoke;
 	font: normal 20px / 1.25 sans-serif;
 	scroll-behavior: smooth;
 }
@@ -16,12 +17,12 @@ html {
 /* Remove text-shadow in selection highlight: https://twitter.com/miketaylr/status/12228805301
  * Customize the background color to match your design. */
 ::-moz-selection {
-	background: #b3d4fc;
+	background-color: var(--NGHT-RD);
 	text-shadow: none;
 }
 
 ::selection {
-	background: #b3d4fc;
+	background-color: var(--NGHT-RD);
 	text-shadow: none;
 }
 
@@ -64,6 +65,11 @@ textarea {
 
 :root {
 	/* Colour palette */
+	--NGHT-RD: #900;
+	--NGHT-BLCK: #191919;
+	--NGHT-RDGRND: #9009;
+	--NGHT-BLCKGRND: #19191999;
+	--NGHT-WHTGRND: #F5F5F599;
 }
 
 h1 {
@@ -99,7 +105,60 @@ p {
 }
 
 a, button {
+	color: var(--NGHT-RD);
+	cursor: pointer;
 	transition-property: all;
+}
+
+button {
+	background-color: transparent;
+	border: .125rem solid currentColor;
+	border-radius: .25rem;
+	padding: .25rem .5rem;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+button:hover {
+	border-radius: .5rem;
+}
+
+a:active, button:active {
+	color: whitesmoke;
+}
+
+figure>:not(figcaption) {
+	margin-left: .5rem;
+}
+
+blockquote>q::before, blockquote>q::after {
+	color: var(--NGHT-RD);
+	display: block;
+}
+
+table {
+	background-color: var(--NGHT-WHTGRND);
+	box-shadow: 0 0 .25rem .25rem var(--NGHT-RD);
+	margin: .25rem;
+}
+
+table caption {
+	caption-side: bottom;
+	margin-top: .25rem;
+}
+
+table th, table td {
+	padding: .125rem .25rem;
+}
+
+table th {
+	background-color: var(--NGHT-RD);
+}
+
+table td {
+	background-color: var(--NGHT-BLCK);
 }
 /* #endregion */
 
