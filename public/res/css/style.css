@@ -254,7 +254,6 @@ figcaption, caption {
 
 table {
 	background-color: var(--NGHT-WHTGRND);
-	box-shadow: 0 0 .25rem .25rem var(--NGHT-RD);
 	margin: .25rem;
 }
 
@@ -285,6 +284,11 @@ span.subtitle {
 	font: normal 2.5em "FixedSys Excelsior", monospace;
 	text-align: right;
 }
+
+.box {
+	background-color: var(--NGHT-BLCKGRND);
+	box-shadow: 0 0 .25rem .25rem var(--NGHT-RD);
+}
 /* #endregion */
 
 /* #region Lay-outs*/
@@ -311,13 +315,17 @@ span.subtitle {
 /* #endregion */
 
 /* #region Main content */
+main h2 {
+	text-align: center;
+}
+
 section#top>nav {
 	background-color: whitesmoke;
 	box-shadow: 0 0 .25rem .25rem whitesmoke;
-	margin-bottom: .25rem;
+	margin-bottom: 2.5rem;
 }
 
-section#top>nav li {
+section#top>nav li, section#page-not-found {
 	padding: .5rem;
 }
 
@@ -329,9 +337,7 @@ section#top>nav li:has(a:active) {
 
 /* #region Footer */
 footer {
-	background-color: var(--NGHT-BLCKGRND);
 	bottom: 0;
-	box-shadow: 0 0 .25rem .25rem var(--NGHT-RD);
 	position: fixed;
 	width: 100%;
 }
