@@ -325,13 +325,17 @@ section#top>nav {
 	margin-bottom: 2.5rem;
 }
 
-section#top>nav li, section#page-not-found {
+section#top>nav li, section#page-not-found, #app-root>noscript {
 	padding: .5rem;
 }
 
 section#top>nav li:has(a:active) {
 	background-color: var(--NGHT-BLCKGRND);
 	transition-property: all;
+}
+
+#app-root>noscript {
+	display: block;
 }
 /* #endregion */
 
