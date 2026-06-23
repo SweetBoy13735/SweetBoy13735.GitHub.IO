@@ -35,5 +35,18 @@ describe("App", () => {
 		// Assert
 		expect(paragraphs.length).toEqual(expectation);
 	});
+
+	it("renders 10px padding around content", async () => {
+		// Arrange
+		const expectation = "10px";
+
+		render(<App />);
+
+		// Act
+		const box = await screen.findByTestId("text-box");
+
+		// Assert
+		expect(box.style.padding).toEqual(expectation);
+	});
 });
 //#endregion
