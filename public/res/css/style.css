@@ -399,8 +399,37 @@ footer {
 
 /* #region Media Queries for Responsive Design */
 /* These examples override the primary ('mobile first') styles. Modify as content requires. */
-@media only screen and (min-width: 35em) {
-	/* Style adjustments for viewports that meet the condition */
+@media only screen and (max-width: 1071.7578947368421052631578947368px) {
+	section#top h1 {
+		font-size: calc(95vw / 1018.17px * 5em);
+	}
+
+	menu>li {
+		margin: 0;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	html {
+		font-size: 15px;
+	}
+
+	section#top h1 {
+		font-size: calc(95vw / 763.625px * 5em);
+	}
+}
+
+@media only screen and (max-width: 592px) {
+	section#top .subtitle {
+		font-size: calc(95vw / 563.25px * 2.5em);
+	}
+}
+
+@media only screen and (max-width: 506px) {
+	menu.flex {
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
 }
 
 @media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
