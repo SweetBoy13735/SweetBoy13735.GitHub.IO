@@ -5,5 +5,10 @@
 			"request": "launch",
 			"type": "node-terminal",
 			"command": "npm run test"
+		}, {
+			"name": "Start Dev server",
+			"request": "launch",
+			"type": "node-terminal",
+			"command": "npm start"
 	}]
 }
