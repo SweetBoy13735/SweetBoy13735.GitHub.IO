@@ -15,7 +15,6 @@ const prodConfig = {
 	plugins: [new CopyWebpackPlugin({ patterns: [
 				{ from: "./public/404.html", to: "404.html" },
 				{ from: "./public/favicon.ico", to: "favicon.ico" },
-				{ from: "./public/site.webmanifest", to: "site.webmanifest" },
 				{ from: "./public/robots.txt", to: "robots.txt" },
 				{ from: "./public/res/css", to: "res/css" },
 				{ from: "./public/res/js/vendor", to: "res/js/vendor" },
