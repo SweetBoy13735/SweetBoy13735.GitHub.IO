@@ -36,9 +36,9 @@ describe("App", () => {
 		expect(paragraphs.length).toEqual(expectation);
 	});
 
-	it("renders 10px padding around content", async () => {
+	it("contains the class \"textBox\".", async () => {
 		// Arrange
-		const expectation = "10px";
+		const expectation = "textBox";
 
 		render(<App />);
 
@@ -46,7 +46,7 @@ describe("App", () => {
 		const box = await screen.findByTestId("text-box");
 
 		// Assert
-		expect(box.style.padding).toEqual(expectation);
+		expect(box).toHaveClass(expectation);
 	});
 });
 //#endregion

@@ -1,6 +1,9 @@
 //#region Code body
 /** @type {import("jest").Config} */
-const config = { testEnvironment: "jsdom" };
+const config = {
+	moduleNameMapper: { "\\.(css|less)$": "identity-obj-proxy" },
+	testEnvironment: "jsdom"
+};
 //#endregion
 
 //#region Module exports

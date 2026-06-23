@@ -2,9 +2,13 @@
 import React from "react";
 //#endregion
 
+//#region Internal module imports
+import styles from "./App.module.css";
+//#endregion
+
 //#region Code body
 function App() {
-	return (<hgroup className="box" data-testId="text-box">
+	return (<hgroup className={`${styles.textBox} box`} data-testid="text-box">
 		<h2>Coming soon!</h2>
 		<p>
 			👋🏿 Hey! Thanks for your interest in my portfolio.
