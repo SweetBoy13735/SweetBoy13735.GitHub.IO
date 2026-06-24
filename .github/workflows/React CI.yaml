@@ -1,7 +1,7 @@
 name: Continuous Integration
 on:
   push:
-    branches: [Main, Development]
+    branches: [Main, Development, Release-*, Hotfix-*]
   workflow_dispatch:
 jobs:
   test:
