@@ -47,9 +47,9 @@ describe("App", () => {
 		expect(paragraphs.length).toEqual(expectation);
 	});
 
-	it("contains the class \"textBox\".", async () => {
+	it("has the classes \"text box\" (Applies .5rem padding).", async () => {
 		// Arrange
-		const expectation = "textBox";
+		const expectation = "text box";
 
 		render(<App />);
 
