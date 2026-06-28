@@ -10,7 +10,18 @@ import App from "./App";
 
 //#region Code body
 describe("App", () => {
-	it("renders \"Coming soon!\" as a heading.", async () => {
+	it("renders a text box to the document.", async () => {
+		// Arrange
+		render(<App />);
+
+		// Act
+		const app = await screen.findByTestId("app");
+
+		// Assert
+		expect(app).toBeInTheDocument();
+	});
+
+	it("contains \"Coming soon!\" as a heading.", async () => {
 		// Arrange
 		const expectation = /^Coming soon!$/;
 
@@ -23,7 +34,7 @@ describe("App", () => {
 		expect(heading).toHaveTextContent(expectation);
 	});
 
-	it("renders 2 paragraphs.", async () => {
+	it("contains 2 paragraphs.", async () => {
 		// Arrange
 		const expectation = 2;
 
@@ -43,7 +54,7 @@ describe("App", () => {
 		render(<App />);
 
 		// Act
-		const box = await screen.findByTestId("text-box");
+		const box = await screen.findByTestId("app");
 
 		// Assert
 		expect(box).toHaveClass(expectation);
