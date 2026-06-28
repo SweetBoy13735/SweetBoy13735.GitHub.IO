@@ -6,6 +6,7 @@
 	"author": "Ramone R. A. Graham",
 	"scripts": {
 		"test": "jest",
+		"test:watch": "jest --watch",
 		"test:coverage": "jest --coverage",
 		"start": "webpack serve --config webpack.dev.js",
 		"build": "webpack --config webpack.prod.js",
