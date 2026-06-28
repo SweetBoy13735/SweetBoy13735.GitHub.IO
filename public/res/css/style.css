@@ -289,6 +289,10 @@ span.subtitle {
 	background-color: var(--NGHT-BLCKGRND);
 	box-shadow: 0 0 .25rem .25rem var(--NGHT-RD);
 }
+
+.text.box {
+	padding: .5rem;
+}
 /* #endregion */
 
 /* #region Lay-outs*/
