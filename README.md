@@ -1,7 +1,7 @@
 # NGHT-RDR's Portfolio
 [![Contributor Covenant](https://img.shields.io/badge/Contributor_Covenant-v3.0_adopted-900.svg)](https://GitHub.com/SweetBoy13735/SweetBoy13735.GitHub.IO/blob/Main/CODE_OF_CONDUCT.md)
 [![Continuous Integration](https://github.com/SweetBoy13735/SweetBoy13735.GitHub.IO/actions/workflows/React%20CI.yaml/badge.svg?branch=Development)](https://github.com/SweetBoy13735/SweetBoy13735.GitHub.IO/actions/workflows/React%20CI.yaml)
-[![Continuous Deployment](https://github.com/SweetBoy13735/SweetBoy13735.GitHub.IO/actions/workflows/React%20CD%20(GitHub%20Pages).yaml/badge.svg?branch=Main)](https://github.com/SweetBoy13735/SweetBoy13735.GitHub.IO/actions/workflows/React%20CD%20(GitHub%20Pages).yaml)
+[![Continuous Deployment](https://github.com/SweetBoy13735/SweetBoy13735.GitHub.IO/actions/workflows/React%20CD%20(GitHub%20Pages).yaml/badge.svg)](https://github.com/SweetBoy13735/SweetBoy13735.GitHub.IO/actions/workflows/React%20CD%20(GitHub%20Pages).yaml)
 
 This is my portfolio site, built with my [custom HTML5 Boilerplate](https://GitHub.com/SweetBoy13735/HTML5-Boilerplate) and [React](https://GitHub.com/react/React).
 
