@@ -4,7 +4,7 @@ import React from "react";
 
 //#region Code body
 function App() {
-	return (<hgroup className="text box" data-testid="app">
+	return (<hgroup className="text box container" data-testid="app">
 		<h2>Coming soon!</h2>
 		<p>
 			👋🏿 Hey! Thanks for your interest in my portfolio.
