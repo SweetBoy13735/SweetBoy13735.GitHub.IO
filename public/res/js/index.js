@@ -4,7 +4,7 @@ import { createRoot } from "react-dom/client";
 //#endregion
 
 //#region Internal module imports
-import App from "./components/App";
+import App from "./app/App";
 //#endregion
 
 //#region Code body
