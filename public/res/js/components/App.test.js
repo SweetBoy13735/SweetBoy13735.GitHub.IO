@@ -10,54 +10,44 @@ import App from "./App";
 
 //#region Code body
 describe("App", () => {
-	it("renders a text box to the document.", async () => {
+	it("renders a text box container to the document.", () => {
 		// Arrange
+		const expectation = "text box container";
+
 		render(<App />);
 
 		// Act
-		const app = await screen.findByTestId("app");
+		const app = screen.getByTestId("app");
 
 		// Assert
 		expect(app).toBeInTheDocument();
+		expect(app).toHaveClass(expectation);
 	});
 
-	it("contains \"Coming soon!\" as a heading.", async () => {
+	it("contains \"Coming soon!\" as a heading.", () => {
 		// Arrange
 		const expectation = /^Coming soon!$/;
 
 		render(<App />);
 
 		// Act
-		const heading = await screen.findByRole("heading");
+		const heading = screen.getByRole("heading", { name: expectation });
 
 		// Assert
-		expect(heading).toHaveTextContent(expectation);
+		expect(heading).toBeInTheDocument();
 	});
 
-	it("contains 2 paragraphs.", async () => {
+	it("contains 2 paragraphs.", () => {
 		// Arrange
 		const expectation = 2;
 
 		render(<App />);
 
 		// Act
-		const paragraphs = await screen.findAllByRole("paragraph");
+		const paragraphs = screen.getAllByRole("paragraph");
 
 		// Assert
-		expect(paragraphs.length).toEqual(expectation);
-	});
-
-	it("has the classes \"text box\" (Applies .5rem padding).", async () => {
-		// Arrange
-		const expectation = "text box";
-
-		render(<App />);
-
-		// Act
-		const box = await screen.findByTestId("app");
-
-		// Assert
-		expect(box).toHaveClass(expectation);
+		expect(paragraphs).toHaveLength(expectation);
 	});
 });
 //#endregion
