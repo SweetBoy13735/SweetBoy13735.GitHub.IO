@@ -106,13 +106,6 @@ canvas, iframe, img, svg, video {
 	vertical-align: middle;
 }
 
-/* Remove default fieldset styles. */
-fieldset {
-	border: 0;
-	margin: 0;
-	padding: 0;
-}
-
 /* Allow only vertical resizing of textareas. */
 textarea {
 	resize: vertical;
@@ -177,29 +170,36 @@ p {
 	margin: .5em 0;
 }
 
-a, button, figcaption, caption {
+a, button, figcaption, caption, input, select, textarea {
 	font-weight: normal !important;
 }
 
-a, button {
+a, button, input::file-selector-button {
 	color: var(--NGHT-RD);
 	cursor: pointer;
 	transition-property: all;
 }
 
-button, .rounded {
+button, input::file-selector-button, .rounded {
 	border-radius: .25rem;
 }
 
-a::selection, button::selection, a:active, button:active {
+a::selection, button::selection, a:active, button:active, input::file-selector-button:active, input:focus::file-selector-button {
 	color: whitesmoke;
 }
 
-button {
-	background-color: transparent;
-	border: .125rem solid currentColor;
-	border-radius: .25rem;
+button, fieldset, input, input::file-selector-button, select, textarea {
+	border: .125rem solid;
+}
+
+button, input, select, textarea {
 	font: inherit;
+}
+
+button, input::file-selector-button {
+	background-color: transparent;
+	border-color: currentColor;
+	border-radius: .25rem;
 	padding: .25rem .5rem;
 }
 
@@ -207,7 +207,7 @@ a:hover {
 	text-decoration: none;
 }
 
-button:hover {
+button:hover, input::file-selector-button:hover {
 	border-radius: .5rem;
 }
 
@@ -233,6 +233,71 @@ menu>li:first-of-type {
 
 menu>li:last-of-type {
 	margin-right: 0;
+}
+
+fieldset, .text.box, section#top>nav li {
+	padding: .5rem;
+}
+
+fieldset {
+	border-color: var(--NGHT-RD);
+}
+
+fieldset>label:first-of-type {
+	margin-top: 0;
+}
+
+fieldset>label:last-of-type {
+	margin-bottom: 0;
+}
+
+legend {
+	padding: 0 .25rem;
+}
+
+label {
+	display: block;
+	margin: .25rem 0;
+	width: fit-content;
+}
+
+input, select, textarea {
+	accent-color: var(--NGHT-RD);
+	background: none;
+	border-color: var(--NGHT-RD);
+	color: currentColor;
+	min-height: 1.5rem;
+	transition-property: all;
+	vertical-align: middle;
+}
+
+input:not([type="checkbox"], [type="radio"]), select {
+	border-left: none;
+	border-right: none;
+	border-top: none;
+	width: 10rem;
+}
+
+input[type="checkbox"], input[type="color"], input[type="radio"] {
+	width: 1.5rem;
+}
+
+input[type="color"], input[type="file"], input[type="range"] {
+	border: none;
+}
+
+input:focus, select:focus, textarea:focus {
+	background-color: var(--NGHT-RDGRND);
+	border-color: currentColor;
+	outline: none;
+}
+
+input::file-selector-button {
+	display: block;
+}
+
+input:focus::file-selector-button {
+	background-color: var(--NGHT-BLCKGRND);
 }
 
 q {
@@ -292,10 +357,6 @@ noscript {
 .box {
 	background-color: var(--NGHT-BLCKGRND);
 	box-shadow: 0 0 .25rem .25rem var(--NGHT-RD);
-}
-
-.text.box, section#top>nav li {
-	padding: .5rem;
 }
 /* #endregion */
 
