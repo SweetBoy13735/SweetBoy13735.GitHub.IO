@@ -6,22 +6,26 @@
 /* #region At-rules */
 @font-face {
 	font-family: "Until 25";
+	font-display: swap;
 	src: url(../assets/fonts/Until25-Italic.otf) format(opentype);
 }
 
 @font-face {
 	font-family: "FixedSys Excelsior";
+	font-display: swap;
 	src: url(../assets/fonts/FSEX302.ttf) format(truetype);
 }
 
 @font-face {
 	font-family: Tomorrow;
+	font-display: fallback;
 	font-weight: bold;
 	src: url(../assets/fonts/Tomorrow-Bold.ttf) format(truetype);
 }
 
 @font-face {
 	font-family: Tomorrow;
+	font-display: fallback;
 	font-style: italic;
 	font-weight: bold;
 	src: url(../assets/fonts/Tomorrow-BoldItalic.ttf) format(truetype);
@@ -29,23 +33,27 @@
 
 @font-face {
 	font-family: "IBM Plex Sans";
+	font-display: fallback;
 	src: url(../assets/fonts/IBMPlexSans-Regular.ttf) format(truetype);
 }
 
 @font-face {
 	font-family: "IBM Plex Sans";
+	font-display: fallback;
 	font-weight: 300;
 	src: url(../assets/fonts/IBMPlexSans-Light.ttf) format(truetype);
 }
 
 @font-face {
 	font-family: "IBM Plex Sans";
+	font-display: fallback;
 	font-weight: 500;
 	src: url(../assets/fonts/IBMPlexSans-Medium.ttf) format(truetype);
 }
 
 @font-face {
 	font-family: "IBM Plex Sans";
+	font-display: fallback;
 	font-weight: bold;
 	font-style: italic;
 	src: url(../assets/fonts/IBMPlexSans-BoldItalic.ttf) format(truetype);
@@ -53,12 +61,14 @@
 
 @font-face {
 	font-family: "IBM Plex Sans";
+	font-display: fallback;
 	font-stretch: condensed;
 	src: url(../assets/fonts/IBMPlexSansCondensed-Regular.ttf) format(truetype);
 }
 
 @font-face {
 	font-family: "IBM Plex Sans";
+	font-display: fallback;
 	font-stretch: condensed;
 	font-style: italic;
 	src: url(../assets/fonts/IBMPlexSansCondensed-Italic.ttf) format(truetype);
@@ -66,6 +76,7 @@
 
 @font-face {
 	font-family: "IBM Plex Serif";
+	font-display: fallback;
 	font-style: italic;
 	src: url(../assets/fonts/IBMPlexSerif-Italic.ttf) format(truetype);
 }
@@ -76,7 +87,6 @@ html {
 	background: fixed center / cover no-repeat url(../assets/img/Branding/Elements/NGHT-VSN/2025/The\ Icarus\ Journey.png), var(--NGHT-BLCK);
 	color: whitesmoke;
 	font: 300 20px / 1.25 "IBM Plex Sans", sans-serif;
-	scroll-behavior: smooth;
 }
 
 /* Remove text-shadow in selection highlight: https://twitter.com/miketaylr/status/12228805301
@@ -384,7 +394,7 @@ noscript {
 /* #endregion */
 
 /* #region Main content */
-main h2 {
+section h2 {
 	text-align: center;
 }
 
@@ -459,6 +469,12 @@ footer {
 /* #endregion */
 
 /* #region Media Queries for Responsive Design */
+@media (prefers-reduced-motion: no-preference) {
+	html {
+		scroll-behavior: smooth;
+	}
+}
+
 @media only screen and (max-width: 833.37157894736842105263157894737px) {
 	section#top>nav li {
 		margin: 0;
