@@ -17,7 +17,7 @@ const commonConfig = {
 				test: /\.(svg|png|gif|jpg|jpeg)$/i,
 				type: "asset/resource"
 			}, {
-				test: /\.(m?js|jsx)$/,
+				test: /\.(m?js|jsx)$/i,
 				exclude: /node_modules/,
 				use: {
 					loader: "babel-loader",
