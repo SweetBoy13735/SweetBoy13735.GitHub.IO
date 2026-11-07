@@ -16,21 +16,21 @@ describe("App", () => {
 		render(<App />);
 
 		// Act
-		const app = screen.getByTestId("app");
+		const app = screen.getByRole("region");
 
 		// Assert
 		expect(app).toBeInTheDocument();
 		expect(app).toHaveClass(expectation);
 	});
 
-	it("contains \"Coming soon!\" as a heading.", () => {
+	it("contains \"Coming soon!\" as a level 2 heading.", () => {
 		// Arrange
 		const expectation = /^Coming soon!$/;
 
 		render(<App />);
 
 		// Act
-		const heading = screen.getByRole("heading", { name: expectation });
+		const heading = screen.getByRole("heading", { level: 2, name: expectation });
 
 		// Assert
 		expect(heading).toBeInTheDocument();
