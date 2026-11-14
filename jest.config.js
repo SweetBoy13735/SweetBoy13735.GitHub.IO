@@ -3,7 +3,7 @@
 const config = {
 	moduleFileExtensions: ["jsx", "js"],
 	moduleNameMapper: {
-		"\\.(svg|png|gif|jpg|jpeg|otf|ttf|eot|webp|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/file-mock.js",
+		"\\.(svg|webp|png|gif|jpg|jpeg|webm|mp4|wav|mp3|m4a|aac|oga|woff2|woff|eot|otf|ttf)$": "<rootDir>/__mocks__/file-mock.js",
 		"\\.css$": "identity-obj-proxy"
 	}, setupFilesAfterEnv: ["<rootDir>/jest-setup.js"],
 	testEnvironment: "jsdom"

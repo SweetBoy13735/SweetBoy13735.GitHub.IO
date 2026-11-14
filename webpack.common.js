@@ -13,8 +13,10 @@ const commonConfig = {
 		clean: true
 	}, plugins: [new HTMLWebpackPlugin({ template: "./public/index.html" })],
 	module: {
-		rules: [{
-				test: /\.(svg|png|gif|jpg|jpeg)$/i,
+		parser: {
+			"css/auto": { dashedIdents: false, namedExports: false }
+		}, rules: [{
+				test: /\.(svg|webp|png|gif|jpg|jpeg|webm|mp4|wav|mp3|m4a|aac|oga|woff2|woff|eot|otf|ttf)$/i,
 				type: "asset/resource"
 			}, {
 				test: /\.(m?js|jsx)$/i,
