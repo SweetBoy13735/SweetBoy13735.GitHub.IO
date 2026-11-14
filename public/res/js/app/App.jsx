@@ -1,7 +1,3 @@
-//#region External module imports
-import React from "react";
-//#endregion
-
 //#region Code body
 function App() {
 	return (<section id="coming-soon" className="text box container" aria-label="Coming soon message">

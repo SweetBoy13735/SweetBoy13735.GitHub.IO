@@ -1,6 +1,7 @@
 //#region External module imports
 const Path = require("node:path");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
+const { reactCompilerLoader } = require("react-compiler-webpack");
 //#endregion
 
 //#region Code body
@@ -21,17 +22,15 @@ const commonConfig = {
 			}, {
 				test: /\.(m?js|jsx)$/i,
 				exclude: /node_modules/,
-				use: {
-					loader: "babel-loader",
-					options: {
-						presets: [
-							"@babel/preset-env",
-							["@babel/preset-react", { development: true }]
-						]
-					}
-				}
-		}]
-	}, resolve: { extensions: [".jsx", "..."] }
+				use: [{
+						loader: "babel-loader",
+						options: {
+							plugins: ["babel-plugin-react-compiler"],
+							presets: [
+								"@babel/preset-env",
+								["@babel/preset-react", { development: true }]
+				] } }, reactCompilerLoader]
+	}] }, resolve: { extensions: [".jsx", "..."] }
 };
 //#endregion
 

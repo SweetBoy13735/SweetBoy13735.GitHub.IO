@@ -1,5 +1,5 @@
 //#region External module imports
-import React, { StrictMode } from "react";
+import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 //#endregion
 

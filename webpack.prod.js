@@ -9,7 +9,7 @@ const Common = require("./webpack.common.js");
 
 //#region Code body
 // Set @babel/preset-react development mode to false.
-Common.module.rules[1].use.options.presets[1][1].development = false;
+Common.module.rules[1].use[0].options.presets[1][1].development = false;
 
 /** @type {import("webpack").Configuration} */
 const prodConfig = {
